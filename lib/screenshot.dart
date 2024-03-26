@@ -160,10 +160,7 @@ class ScreenshotController {
       view: view,
       child: RenderPositionedBox(
           alignment: Alignment.center, child: repaintBoundary),
-      configuration: ViewConfiguration(
-        size: logicalSize,
-        devicePixelRatio: pixelRatio ?? 1.0,
-      ),
+      configuration: ViewConfiguration.fromView(view),
     );
 
     final PipelineOwner pipelineOwner = PipelineOwner();
